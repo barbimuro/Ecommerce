@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0 ;
+  padding: 0 ;
+}
+
+#root {
+  display: flex;
+  flex-flow: wrap-reverse;
+  justify-content: center;
+  align-items: center;
+  top: auto;
+}
+
+
+#cartWidgetImg{
+height: 5vh;
+width: auto;
+}
+
+#cartWidgetText{
+  display: inline;
+}
+
+#navBar {
+  display: flex;
+}
