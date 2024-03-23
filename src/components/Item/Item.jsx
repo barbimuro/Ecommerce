@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 
 const Item = ({id, name, price, category, img, stock, brand, description}) => {
     return (
-      <article className="CardItem col-md-4">
+      <article className="CardItem col-md-6 col-lg-4">
         <header className="Header">
-            <h2 className="ItemHeader">
+            <h2 className="ItemHeader d-flex justify-content-evenly">
                 {name}
             </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className="ItemImg" />
+                <img src={img} alt={name} id='itemPicture' className="ItemImg rounded mx-auto d-block d-flex justify-content-evenly" />
             </picture>
             <section>
-                <p className="ItemInfo">Precio: {price}</p>
+                <p className="ItemInfo d-flex justify-content-evenly">Precio: {price}</p>
             </section>
-            <footer className="ItemFooter">
+            <footer className="ItemFooter d-flex justify-content-evenly">
                 <Link to={`/item/${id}`} className="option">Ver Detalle</Link>
             </footer>
         

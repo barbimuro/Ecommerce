@@ -3,23 +3,27 @@ import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
   return (
-    <nav id='navBar'>
+    <nav className='row' id='navBar'>
             <Link to='/'>
-                <h2>Mi tienda de maquillaje</h2>
+                <h2 id='navBarTitle' className='text-center pt-3'>Mi tienda de maquillaje</h2>
             </Link>
-      <div className='categories'>
-        <NavLink to={`/category/PreMakeUp`} className='Option'>
-          Pre-MakeUp
-        </NavLink>
-        <NavLink to={`/category/BasesYCorrectores`} className='Option'>
-          Bases y correctores
-        </NavLink>
-        <NavLink to={`/category/Sombras`} className='Option'>
-          Sombras
-        </NavLink>
-      </div>
-      <CartWidget />
-      <Outlet /> {/* Este Outlet es importante */}
+            <div className='col-9'>
+          <div className='categories row '>
+                <NavLink id='navBarTitle' to={`/category/PreMakeUp`} className='Option col-3 d-flex justify-content-evenly'>
+                  Pre-MakeUp
+                </NavLink>
+                <NavLink id='navBarTitle' to={`/category/BasesYCorrectores`} className='Option col-4 d-flex justify-content-evenly'>
+                  Bases y correctores
+                </NavLink>
+                <NavLink id='navBarTitle' to={`/category/Sombras`} className='Option col-4 d-flex justify-content-evenly'>
+                  Sombras
+                </NavLink>
+                </div>
+        </div>
+        <div className='col-3'>
+              <CartWidget />
+              <Outlet /> {/* Este Outlet es importante */}
+        </div>
     </nav>
   );
 };
