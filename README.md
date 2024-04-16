@@ -8,13 +8,34 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
   ➜  Local:   http://localhost:5173/
-# SegundaPreEntregaReactMuroKuchar
+# Nombre del Proyecto
+
+## Descripción
+Este es un proyecto de e-commerce desarrollado en ReactJS, enfocado en la venta de productos de estética. El sitio ofrece una selección de productos básicos de alta calidad, con una estética chic y minimalista.
+
+## Funcionalidades
+- Visualización de productos: Los usuarios pueden ver los productos disponibles en la tienda.
+- Detalles del producto: Los usuarios pueden ver información detallada sobre cada producto, incluyendo su descripción, precio y disponibilidad.
+- Carrito de compras: Los usuarios pueden agregar productos al carrito y realizar compras.
+- Gestión de estado: Se utiliza el estado local del componente y los hooks de React (useState, useEffect) para gestionar la lógica de la aplicación.
+
+## Tecnologías Utilizadas
+- ReactJS
+- Hooks (useState, useEffect, useParams)
+- HTML/CSS
+
+## Instalación
+1. Clona este repositorio.
+2. Navega hasta el directorio del proyecto.
+3. Ejecuta `npm create vite@latest` para instalar las dependencias.
+4. Ejecuta `npm install` para iniciar la aplicación en modo desarrollo utilizando Vite.
+5. Ejecuta `npm run dev`.
+
+## Contribución
+Las contribuciones son bienvenidas. Si tienes sugerencias, por favor crea un "issue" o envía un "pull request".
+
+## Autor
+Bárbara Muro // (https://github.com/barbimuro)
 
 
-.env:
-VITE_API_KEY= "AIzaSyCBeathYJAFVwGa2cu3zuAmUpH1TSctvz8"
-VITE_AUTH_DOMAIN="ecommerce-64443.firebaseapp.com"
-VITE_PROJECT_ID= "ecommerce-64443"
-VITE_STORAGE_BUCKET= "ecommerce-64443.appspot.com"
-VITE_SENDER_ID= "994079181659"
-VITE_APP_ID= "1:994079181659:web:4b5457b4001e1224a2687e"
+

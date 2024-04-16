@@ -3,7 +3,6 @@ import { CartContext } from "../../context/CartContext";
 import { Timestamp, addDoc, collection, doc, documentId, getDocs, query, where, writeBatch } from "firebase/firestore";
 import { db } from "../../main";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
-import { Await } from "react-router-dom";
 
 
 
