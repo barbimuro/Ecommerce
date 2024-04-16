@@ -29,4 +29,3 @@ return (
 }
 
 export default App
-/*  <Route path='/checkout' element={<Checkout/>}/> */
