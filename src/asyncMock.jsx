@@ -30,6 +30,8 @@
         description: 'Sombra para tus ojos'
     }
  ]
+export default products 
+
  export const getProducts = () => {
     return new Promise((resolve)=>{
         setTimeout(()=> {

@@ -2,12 +2,38 @@ import React, { useState, useEffect } from "react";
 import { getProducts, getProductsById, getProductsByCategory } from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import {getDocs, query, where, collection } from 'firebase/firestore'
+import { db } from "../../main";
 
-const ItemListConteiner = ({ saludo }) => {
+const ItemListConteiner = () => {
     const [products, setProducts] = useState ([])
 
-    const { categoryId } = useParams()
 
+    const { categoryId } = useParams()
+    useEffect(()=>{
+        const collectionRef = categoryId
+        ?query(collection(db, 'productos'), where ('category', '==', categoryId))
+        :collection(db, 'productos')
+
+        getDocs(collectionRef)
+            .then(response => {
+                const productsAdapted = response.docs.map(doc =>{
+                    const data = doc.data()
+                    return{id: doc.id, ...data}
+                    
+                })
+                setProducts(productsAdapted) 
+            }) .catch(error =>{
+                console.error(error)
+            })
+        /*
+        const queryProd = query(collection(db, 'productos'), where("price", ">", 80))
+        getDocs(queryProd).then((snapshot)=> { if(snapshot.size === 0){
+          console.log('No results found')
+        }
+        snapshot.docs.map((item)=> console.log({...item.data}))})*/
+      },[])
+/*
     useEffect(() => {
         const AsyncFunc = categoryId ? getProductsByCategory : getProducts
 
@@ -19,10 +45,9 @@ const ItemListConteiner = ({ saludo }) => {
             console.error(error);
         });
     }, [categoryId]);
-
+*/
     return (
-        <div>
-            <h1>{saludo}</h1>
+        <div>   
             <ItemList products={products} />
         </div>
     );
