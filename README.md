@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 
   ➜  Local:   http://localhost:5173/
 # SegundaPreEntregaReactMuroKuchar
+# entregaFinalReact
